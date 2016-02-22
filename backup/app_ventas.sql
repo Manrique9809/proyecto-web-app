@@ -2,9 +2,9 @@
 -- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 03-02-2016 a las 12:53:32
--- Versión del servidor: 5.5.46-0ubuntu0.14.04.2
+-- Servidor: localhost:3306
+-- Tiempo de generación: 22-02-2016 a las 12:52:35
+-- Versión del servidor: 5.5.47-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,6 +23,103 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE IF NOT EXISTS `clientes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
+  `apellidos` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
+  `dni` char(8) COLLATE utf8_spanish_ci NOT NULL,
+  `fecha` date NOT NULL,
+  `distrito` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `foto` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `estado` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=24 ;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombre`, `apellidos`, `dni`, `fecha`, `distrito`, `direccion`, `foto`, `estado`) VALUES
+(1, 'fdasfdsa', 'fdsafdsa', 'fdsafsad', '0000-00-00', '', '', '', 1),
+(2, 'fsdafasd', 'fdsafasd', 'fsdafsad', '0000-00-00', '', '', '', 1),
+(3, 'afdsafsad', 'fsadfdsa', 'fsdafsad', '0000-00-00', '', '', '', 1),
+(4, 'fdsaf', 'fdsfas', 'fdsafdsa', '0000-00-00', '', '', '', 1),
+(5, 'fdasfsa', 'fsdafsdfsaf', 'fdsaffds', '0000-00-00', '', '', '', 1),
+(6, 'fdsfs', 'fdsfdsfs', 'fdsfsdf', '0000-00-00', '', '', '', 1),
+(7, '111111', '1111111111', '11111111', '0000-00-00', '', '', '', 1),
+(8, '222222222', '222222222', '22222222', '2016-02-09', 'magdalena', '2222222', '', 1),
+(9, '1', '2', '3', '2016-02-12', 'ate', 'w', '', 1),
+(10, '', '', '', '0000-00-00', '#', '', '', 1),
+(11, 'jhon', 'manrique', '8984738', '2014-10-21', 'magdalena', 'dddd', '', 1),
+(12, '', '', '', '0000-00-00', '#', '', '', 1),
+(13, '', '', '', '0000-00-00', '#', '', '', 1),
+(14, '', '', '', '0000-00-00', '#', '', '', 1),
+(15, '', '', '', '0000-00-00', '#', '', '', 1),
+(16, 'asdasd', '', '', '0000-00-00', '#', '', '', 1),
+(17, '11111', 'asdasd', 'asdasdas', '0000-00-00', '#', '', '', 1),
+(18, 'asdasd', 'sadasdasd', '', '0000-00-00', '#', '', '', 1),
+(19, 'asdasdasd', '', '', '0000-00-00', '#', '', '', 1),
+(20, 'asdasdasd', '', '', '0000-00-00', '#', '', '', 1),
+(21, 'asdasdasd', 'asdasdasd', '', '0000-00-00', '#', '', '', 1),
+(22, '1', '2', '', '0000-00-00', '#', '', '', 1),
+(23, 'asdasd', '1', '', '0000-00-00', '#', '', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contactos`
+--
+
+CREATE TABLE IF NOT EXISTS `contactos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(150) NOT NULL,
+  `apellidos` varchar(150) NOT NULL,
+  `telefono` varchar(15) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mensaje` text NOT NULL,
+  `fecha_add` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ip` varchar(200) NOT NULL,
+  `estado` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=778 ;
+
+--
+-- Volcado de datos para la tabla `contactos`
+--
+
+INSERT INTO `contactos` (`id`, `nombre`, `apellidos`, `telefono`, `email`, `mensaje`, `fecha_add`, `ip`, `estado`) VALUES
+(1, 'asmita', 'virgo', '7777777', '777@777.com', '7777777777777777777777777', '2016-02-08 16:41:25', '7777', 1),
+(777, 'Anibal', 'Chacon', '7777777', '777@gmail.com', 'asmita', '2016-02-08 17:54:30', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `exp_laboral`
+--
+
+CREATE TABLE IF NOT EXISTS `exp_laboral` (
+  `empresa` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` int(15) NOT NULL,
+  `anio_inicio` date NOT NULL,
+  `anio_fin` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `exp_laboral`
+--
+
+INSERT INTO `exp_laboral` (`empresa`, `telefono`, `anio_inicio`, `anio_fin`) VALUES
+('', 0, '0000-00-00', '0000-00-00'),
+('', 0, '0000-00-00', '0000-00-00'),
+('', 0, '0000-00-00', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `juegos`
 --
 
@@ -35,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `juegos` (
   `add_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `estado` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `juegos`
