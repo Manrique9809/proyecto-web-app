@@ -21,10 +21,12 @@ class Clientes extends CI_Controller {
 	//Guardar informacion en la base de datos
 	public function store()
 	{
-		$_post = $this->input->post();
+		$_post = $this->input->post($nombre);
 
 		
-		$_result =  $this->Clientes_model->add($_post );
+		$_result =  $this->Clientes_model->add($_post);
+
+
 
 		if ($_result) 
 			redirect($this->controller.'/show');
@@ -32,6 +34,11 @@ class Clientes extends CI_Controller {
 			exit(json_encode(array('status'=>FALSE,'message'=>'Error al registrar los datos')));
 
 	}
+
+
+
+
+
 	//Muestra un determinado registro
 	public function show()
 	{

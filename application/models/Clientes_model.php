@@ -13,15 +13,25 @@ class Clientes_model extends CI_Model
             parent::__construct();
 
             $this->tabla = "clientes";
+            $this->tabla2 = "exp_laboral";
+            
         }
     //agregar registros
     public function add($_post)
     {
+
+      
+
     	if (empty($_post))
     		return false;
     	
     	return $this->db->insert($this->tabla,$_post);
+
+
     }
+
+
+
     //actualizar registros
     public function update($_post,$id)
     {

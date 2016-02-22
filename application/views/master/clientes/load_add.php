@@ -71,20 +71,133 @@
         </div>
         
 
-         <div class="box-header with-border">
-      <h3 class="box-title">Exp. Laboral</h3>
     </div>
-    
+
+
+         
+      <h3 class="box-title">Exp. Laboral</h3>
+
+    <div class="box box-info">
+      <div class="box-header with-border">
+        <h3 class="box-title">Datos</h3>
+      </div><!-- /.box-header -->
 
      <div class="form-group">
           <label for="empresa" class="col-sm-2 control-label">Empresa 1</label>
           <div class="col-sm-4">
             <input type="text" class="form-control" id="empresa" name="empresa" placeholder="empresa">
           </div>
-        </div>
+      </div>
 
-     
+      <div class="form-group">
+          <label for="telefono" class="col-sm-2 control-label">telefono</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono">
+          </div>
+      </div>
+
+
+      <div class="form-group">
+          <label for="anio_inicio" class="col-sm-2 control-label">Año inicio</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio" placeholder="año de inicio">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="anio_fin" class="col-sm-2 control-label">Año fin</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="anio_fin" name="anio_fin" placeholder="año fin">
+          </div>
+      </div>
+
+  
        
+   </div> 
+
+
+
+    <div class="box box-info">
+      <div class="box-header with-border">
+        <h3 class="box-title">Datos</h3>
+      </div><!-- /.box-header -->
+
+     <div class="form-group">
+          <label for="empresa" class="col-sm-2 control-label">Empresa 2</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="empresa">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="telefono" class="col-sm-2 control-label">telefono</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono">
+          </div>
+      </div>
+
+
+      <div class="form-group">
+          <label for="anio_inicio" class="col-sm-2 control-label">Año inicio</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio" placeholder="año de inicio">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="anio_fin" class="col-sm-2 control-label">Año fin</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="anio_fin" name="anio_fin" placeholder="año fin">
+          </div>
+      </div>
+
+  
+       
+   </div> 
+
+
+
+    <div class="box box-info">
+      <div class="box-header with-border">
+        <h3 class="box-title">Datos 3</h3>
+      </div><!-- /.box-header -->
+
+     <div class="form-group">
+          <label for="empresa" class="col-sm-2 control-label">Empresa 3</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="empresa">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="telefono" class="col-sm-2 control-label">telefono</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono">
+          </div>
+      </div>
+
+
+      <div class="form-group">
+          <label for="anio_inicio" class="col-sm-2 control-label">Año inicio</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio" placeholder="año de inicio">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="anio_fin" class="col-sm-2 control-label">Año fin</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="anio_fin" name="anio_fin" placeholder="año fin">
+          </div>
+      </div>
+
+  
+       
+   </div> 
+ 
+  </div>
+
+        
       </div>
       <div class="box-footer">
         <a href="<?php echo base_url($controller.'/show') ?>" class="btn btn-danger"><span class="glyphicon glyphicon-left" aria-hidden="true"></span> Cancelar</a>
