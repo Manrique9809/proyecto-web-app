@@ -23,7 +23,9 @@
                         <th>Nombre</th>
                         <th>Apellidos</th>
                         <th>DNI</th>
-                        <th></th>
+                        <th>Fecha</th>
+                        <th>Distrito</th>
+                        <th>Direccion</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -38,6 +40,10 @@
                         <td><?php echo $items[$i]->nombre ?></td>
                         <td><?php echo $items[$i]->apellidos ?></td>
                         <td><?php echo $items[$i]->dni ?></td>
+                         <td><?php echo $items[$i]->fecha ?></td>
+                          <td><?php echo $items[$i]->distrito ?></td>
+                           <td><?php echo $items[$i]->direccion ?></td>
+
                         <td>
                           <a href="<?php echo base_url($controller.'/edit/'.$items[$i]->id) ?>" class="btn btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
                           <a href="<?php echo base_url($controller.'/destroy') ?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
