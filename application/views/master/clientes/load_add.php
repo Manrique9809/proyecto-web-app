@@ -3,7 +3,7 @@
    <div class="box-header">
       
       <div class="pull-left">
-        <h2 class="u-top-0">Nuevo Cliente</h2>
+        <h2 class="u-top-0">Nuevo Personales</h2>
       </div>
       <div class="pull-right">
           <a href="<?php echo base_url($controller.'/show') ?>" class="btn btn-info">
@@ -15,7 +15,7 @@
  </div>
 <div class="box box-info">
     <div class="box-header with-border">
-      <h3 class="box-title">Datos del Cliente</h3>
+      <h3 class="box-title">Datos</h3>
     </div><!-- /.box-header -->
     <!-- form start -->
     <form class="form-horizontal" action="<?php echo base_url($controller.'/store') ?>" method="POST">
@@ -70,9 +70,22 @@
           </div>
         </div>
         
+
+         <div class="box-header with-border">
+      <h3 class="box-title">Exp. Laboral</h3>
+    </div>
+    
+
+     <div class="form-group">
+          <label for="empresa" class="col-sm-2 control-label">Empresa 1</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="empresa">
+          </div>
+        </div>
+
      
        
-      </div><!-- /.box-body -->
+      </div>
       <div class="box-footer">
         <a href="<?php echo base_url($controller.'/show') ?>" class="btn btn-danger"><span class="glyphicon glyphicon-left" aria-hidden="true"></span> Cancelar</a>
         <button type="submit" class="btn btn-info pull-right"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Registrar</button>
