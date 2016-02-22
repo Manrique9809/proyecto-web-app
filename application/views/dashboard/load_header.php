@@ -324,7 +324,7 @@
                 <i class="fa fa-dashboard"></i> <span>Master</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="<?php echo base_url('clientes/show') ?>   "><i class="fa fa-circle-o"></i> Curriculum</a></li>
+                <li class="active"><a href="<?php echo base_url('clientes/show') ?>   "><i class="fa fa-circle-o"></i> Curriculums</a></li>
     
               </ul>
             </li>
