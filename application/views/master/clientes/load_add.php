@@ -19,11 +19,14 @@
     </div><!-- /.box-header -->
     <!-- form start -->
     <form class="form-horizontal" action="<?php echo base_url($controller.'/store') ?>" method="POST">
+
+
       <div class="box-body">
         <div class="form-group">
           <label for="nombre" class="col-sm-2 control-label">Nombre</label>
           <div class="col-sm-4">
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+       
           </div>
         </div>
 
@@ -44,7 +47,7 @@
 
          <div class="form-group">
           <label for="fecha" class="col-sm-2 control-label">Fec.Nac</label>
-          <div class="col-sm-4">
+          <div class="col-sm-4">  
             <input type="date" class="form-control" id="fecha" name="fecha" placeholder="FECHA">
           </div>
         </div>
@@ -116,7 +119,6 @@
    </div> 
 
 
-
     <div class="box box-info">
       <div class="box-header with-border">
         <h3 class="box-title">Datos</h3>
@@ -125,29 +127,22 @@
      <div class="form-group">
           <label for="empresa" class="col-sm-2 control-label">Empresa 2</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="empresa">
+            <input type="text" class="form-control" id="empresa" name="empresa2" placeholder="empresa">
           </div>
       </div>
 
-      <div class="form-group">
-          <label for="telefono" class="col-sm-2 control-label">telefono</label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono">
-          </div>
-      </div>
-
-
+     
       <div class="form-group">
           <label for="anio_inicio" class="col-sm-2 control-label">Año inicio</label>
           <div class="col-sm-4">
-            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio" placeholder="año de inicio">
+            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio2" placeholder="año de inicio">
           </div>
       </div>
 
       <div class="form-group">
           <label for="anio_fin" class="col-sm-2 control-label">Año fin</label>
           <div class="col-sm-4">
-            <input type="date" class="form-control" id="anio_fin" name="anio_fin" placeholder="año fin">
+            <input type="date" class="form-control" id="anio_fin" name="anio_fin2" placeholder="año fin">
           </div>
       </div>
 
@@ -156,44 +151,40 @@
    </div> 
 
 
-
     <div class="box box-info">
       <div class="box-header with-border">
-        <h3 class="box-title">Datos 3</h3>
+        <h3 class="box-title">Datos</h3>
       </div><!-- /.box-header -->
 
      <div class="form-group">
           <label for="empresa" class="col-sm-2 control-label">Empresa 3</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="empresa">
+            <input type="text" class="form-control" id="empresa" name="empresa3" placeholder="empresa">
           </div>
       </div>
 
-      <div class="form-group">
-          <label for="telefono" class="col-sm-2 control-label">telefono</label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono">
-          </div>
-      </div>
 
 
       <div class="form-group">
           <label for="anio_inicio" class="col-sm-2 control-label">Año inicio</label>
           <div class="col-sm-4">
-            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio" placeholder="año de inicio">
+            <input type="date" class="form-control" id="anio_inicio" name="anio_inicio3" placeholder="año de inicio">
           </div>
       </div>
 
       <div class="form-group">
           <label for="anio_fin" class="col-sm-2 control-label">Año fin</label>
           <div class="col-sm-4">
-            <input type="date" class="form-control" id="anio_fin" name="anio_fin" placeholder="año fin">
+            <input type="date" class="form-control" id="anio_fin" name="anio_fin3" placeholder="año fin">
           </div>
       </div>
 
   
        
    </div> 
+
+
+
  
   </div>
 

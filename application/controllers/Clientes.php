@@ -21,13 +21,63 @@ class Clientes extends CI_Controller {
 	//Guardar informacion en la base de datos
 	public function store()
 	{
-		$_post = $this->input->post($nombre);
 
+//datos personales
+
+		$nombre = $this->input->post("nombre");
+		$apellidos = $this->input->post("apellidos");
+		$dni = $this->input->post("dni");
+		$fecha = $this->input->post("fecha");
+		$distrito = $this->input->post("distrito");
+		$direccion = $this->input->post("direccion");
+
+
+//exp. laboral
+		$empresa = $this->input->post("empresa");
+		$empresa2 = $this->input->post("empresa2");
+		$empresa3 = $this->input->post("empresa3");
+		$telefono = $this->input->post("telefono");
+		$anio_inicio = $this->input->post("anio_inicio");
+		$anio_inicio2 = $this->input->post("anio_inicio2");
+		$anio_inicio3 = $this->input->post("anio_inicio3");
+		$anio_fin = $this->input->post("anio_fin");
+		$anio_fin2 = $this->input->post("anio_fin2");
+		$anio_fin3 = $this->input->post("anio_fin3");
+
+
+//array datos personales
+ $_post = array(
+        'nombre'      => $nombre,
+        'apellidos'   =>  $apellidos,
+        'dni'         =>  $dni,
+        'fecha'       =>  $fecha,
+        'distrito'    =>  $distrito,
+        'direccion'   =>  $apellidos,
+     
+    );
+		//$_post = $this->input->post();	
+	$_result =  $this->Clientes_model->add($_post);
+	$id=$this->db->insert_id();
+
+//array exp. laboral
+ $_post2 = array( 
+		'id_cliente'  => $id,
+  		'empresa'     => $empresa,
+  		'empresa2'     => $empresa2,
+  		'empresa3'     => $empresa3,
+        'telefono'    => $telefono,
+        'anio_inicio' => $anio_inicio,
+        'anio_inicio2' => $anio_inicio2,
+        'anio_inicio3' => $anio_inicio3,
+        'anio_fin'    => $anio_fin,
+        'anio_fin2'    => $anio_fin2,
+        'anio_fin3'    => $anio_fin3   
+    );
+
+
+		$_result =  $this->Clientes_model->add_exp_alboral($_post2);
+//print_r($_post);
 		
-		$_result =  $this->Clientes_model->add($_post);
-
-
-
 		if ($_result) 
 			redirect($this->controller.'/show');
 		else
@@ -36,6 +86,7 @@ class Clientes extends CI_Controller {
 	}
 
 
+	
 
 
 
@@ -89,6 +140,8 @@ class Clientes extends CI_Controller {
 	//Actualizar la informacion
 	public function update()
 	{
+
+
 		
 	}
 	//Eliminar un determinado registro
@@ -102,3 +155,4 @@ class Clientes extends CI_Controller {
 
 	}
 }
+

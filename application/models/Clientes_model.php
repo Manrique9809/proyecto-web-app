@@ -14,18 +14,24 @@ class Clientes_model extends CI_Model
 
             $this->tabla = "clientes";
             $this->tabla2 = "exp_laboral";
-            
         }
     //agregar registros
     public function add($_post)
     {
-
-      
-
     	if (empty($_post))
     		return false;
     	
     	return $this->db->insert($this->tabla,$_post);
+
+
+    }
+
+     public function add_exp_alboral($_post)
+    {
+        if (empty($_post))
+            return false;
+        
+        return $this->db->insert($this->tabla2,$_post);
 
 
     }
@@ -51,7 +57,7 @@ class Clientes_model extends CI_Model
     }
     //busqueda de un registro
     public function get_by_id($id)
-    {
+    {   
     	if (is_numeric($id)) 
     		return false;
     	
