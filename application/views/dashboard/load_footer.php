@@ -174,8 +174,7 @@
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 
-    <!-- jQuery 2.1.4 -->
-    <script src="<?php echo base_url('public/plugins/jQuery/jQuery-2.1.4.min.js') ?>"></script>
+    
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -186,7 +185,7 @@
     <script src="<?php echo base_url('public/bootstrap/js/bootstrap.min.js') ?>"></script>
     <!-- Morris.js charts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="<?php echo base_url('public/plugins/morris/morris.min.js') ?>"></script>
+    
     <!-- Sparkline -->
     <script src="<?php echo base_url('public/plugins/sparkline/jquery.sparkline.min.js') ?>"></script>
     <!-- jvectormap -->
@@ -211,5 +210,7 @@
     <script src="<?php echo base_url('public/dist/js/pages/dashboard.js') ?>"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url('public/dist/js/demo.js') ?>"></script>
+
+
   </body>
 </html>

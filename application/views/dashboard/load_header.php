@@ -30,6 +30,13 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="<?php echo base_url('public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'); ?>">
 
+    <!-- bootstrap datatable  -->
+    <link rel="stylesheet" href="<?php echo base_url('public/plugins/datatables/dataTables.bootstrap.css') ?>">
+     <script src="<?php echo base_url('public/plugins/jQuery/jQuery-2.1.4.min.js') ?>"></script>
+   <!-- DataTables -->
+    <script src="<?php echo base_url('public/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?php echo base_url('public/plugins/datatables/dataTables.bootstrap.min.js') ?>"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,7 +45,8 @@
     <![endif]-->
 
   <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/estilos.css'); ?>">
-
+   <!-- jQuery 2.1.4 -->
+   
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
