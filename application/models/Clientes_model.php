@@ -64,7 +64,12 @@ class Clientes_model extends CI_Model
     //listado de registros
     public function get()
     {
-    	return $this->db->where("estado!=",99)->get($this->tabla)->result();	
+        return $this->db->where("estado!=",99)->get($this->tabla)->result();    
+    }
+
+      public function get_exp()
+    {
+        return $this->db->where("estado!=",99)->get($this->tabla2)->result();    
     }
     //busqueda de un registro
     public function get_by_id($id)

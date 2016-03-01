@@ -97,6 +97,8 @@ class Clientes extends CI_Controller {
 		$data["controller"] = $this->controller;
 
 		$data['items'] = $this->Clientes_model->get();
+		$data['items2'] = $this->Clientes_model->get_exp();
+
 
 		$data["view"] = 'master/'.$this->controller.'/load_list';
 
