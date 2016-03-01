@@ -50,6 +50,17 @@ class Clientes_model extends CI_Model
        
     	return $this->db->where("id",$id)->update($this->tabla,$_post);
     }
+    public function delete($_post,$id)
+    {
+        if (empty($_post)) 
+            return false;
+        
+        if (!is_numeric($id))
+            return false;
+        
+       
+        return $this->db->where("id",$id)->update($this->tabla,$_post);
+    }
     //listado de registros
     public function get()
     {
@@ -58,7 +69,7 @@ class Clientes_model extends CI_Model
     //busqueda de un registro
     public function get_by_id($id)
     {   
-    	if (is_numeric($id)) 
+    	if (!is_numeric($id)) 
     		return false;
     	
     	return $this->db->where("id",$id)->get($this->tabla)->row();

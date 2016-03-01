@@ -46,7 +46,7 @@
                         <td><?php echo $items[$i]->direccion?></td>
                         <td>
                           <a href="<?php echo base_url($controller.'/edit/'.$items[$i]->id) ?>" class="btn btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-                          <a  id = "<?php echo $items[$i]->id ?>"  href="<?php echo base_url($controller.'/destroy') ?>" class="btn btn-danger btn-eliminar"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                          <a  id = "<?php echo $items[$i]->id ?>"  href="<?php echo base_url($controller.'/destroy/'.$items[$i]->id) ?>" class="btn btn-danger btn-eliminar"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                         </td>
                       </tr>
                     <?php } ?> 

@@ -145,9 +145,28 @@ class Clientes extends CI_Controller {
 		
 	}
 	//Eliminar un determinado registro
-	public function destroy()
+	public function destroy($id)
 	{
-		echo "<h1>ESTOS ES PARA ELIMINAR CASHATE</h1>";
+	 
+		if (!is_numeric($id)) 
+			 exit(json_encode(array('status'=>FALSE,'message'=>'id no valido')));
+		
+		if (!$this->Clientes_model->get_by_id($id))
+	 		exit(json_encode(array('status'=>FALSE,'message'=>'id no registrado')));
+
+	 
+    	$data['estado'] = 99;
+
+		$_result =  $this->Clientes_model->delete($data,$id);
+		 
+		if ($_result) 
+			redirect($this->controller.'/show');
+		else
+			exit(json_encode(array('status'=>FALSE,'message'=>'Error al eliminar los datos')));	  
+
+
+
+ 		 
 	}
 	public function registro()
 	{

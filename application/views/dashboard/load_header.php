@@ -46,7 +46,7 @@
 
   <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/estilos.css'); ?>">
    <!-- jQuery 2.1.4 -->
-   
+   <script> var URL = "<?php echo base_url() ?>"</script>
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
